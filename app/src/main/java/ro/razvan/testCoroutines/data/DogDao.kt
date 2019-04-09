@@ -2,7 +2,7 @@ package ro.razvan.testCoroutines.data
 
 import androidx.room.Dao
 import androidx.room.Query
-import io.reactivex.Observable
+import io.reactivex.Flowable
 
 @Dao
 interface DogDao : GenericDao<Dog>{
@@ -11,6 +11,6 @@ interface DogDao : GenericDao<Dog>{
     suspend fun getAll(): List<Dog>
 
     @Query("SELECT * FROM $DOGS")
-    fun getAllRxStream(): Observable<Dog>
+    fun getAllRxStream(): Flowable<List<Dog>>
 
 }

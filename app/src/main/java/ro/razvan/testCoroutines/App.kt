@@ -4,10 +4,7 @@ import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
-import ro.razvan.testCoroutines.di.daos
-import ro.razvan.testCoroutines.di.databases
-import ro.razvan.testCoroutines.di.repositories
-import ro.razvan.testCoroutines.di.viewModels
+import ro.razvan.testCoroutines.di.*
 
 class App: Application(){
 
@@ -16,7 +13,7 @@ class App: Application(){
         startKoin{
             androidLogger()
             androidContext(this@App)
-            modules(databases, daos, repositories, viewModels)
+            modules(databases, daos, repositories, useCases, viewModels)
         }
     }
 

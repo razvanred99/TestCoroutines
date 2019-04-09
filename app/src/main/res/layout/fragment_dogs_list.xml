@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -26,11 +25,12 @@
             android:onClickListener="@{addDogListener}"
             android:layout_marginBottom="16dp"
             android:src="@drawable/ic_add"
-            android:tint="@color/white"
+            android:tint="@color/secondaryTextColor"
             android:layout_marginEnd="16dp" />
 
         <include
             layout="@layout/content_dogs_list"
+            android:id="@+id/content"
             app:hasElements="@{hasElements}"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

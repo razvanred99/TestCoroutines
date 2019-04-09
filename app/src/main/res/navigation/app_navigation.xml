@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/fragmentDogsList">
+
+    <action
+        android:id="@+id/actNewDog"
+        app:destination="@id/fragmentNewDog"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/fragmentNewDog"
+        android:name="ro.razvan.testCoroutines.ui.newDog.NewDogFragment"
+        android:label="@string/new_dog"
+        tools:layout="@layout/fragment_new_dog" />
+
+    <fragment
+        android:id="@+id/fragmentDogsList"
+        android:name="ro.razvan.testCoroutines.ui.dogsList.DogsListFragment"
+        android:label="@string/dogs_list"
+        tools:layout="@layout/fragment_dogs_list" />
+
+</navigation>

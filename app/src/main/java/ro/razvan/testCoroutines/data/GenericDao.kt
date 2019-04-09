@@ -9,6 +9,6 @@ interface GenericDao<T> {
     suspend fun insert(element: T): Long
 
     @Delete
-    suspend fun delete(element: T)
+    suspend fun delete(element: T): Int
 
 }

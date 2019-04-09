@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TestCoroutines</string>
+    <string name="dogs_list">Dogs list</string>
+    <string name="save">Save</string>
+    <string name="dog_name">Dog name</string>
+    <string name="new_dog">New dog</string>
+    <string name="dog_saved_successfully">Dog saved successfully</string>
+    <string name="error_while_saving">Error while saving</string>
+    <string name="delete">Delete</string>
+    <string name="dog_deleted_successfully">Dog deleted successfully</string>
+    <string name="error_while_deleting">Error while deleting</string>
+    <string name="delete_dog_confirmation">Are you sure do you want to delete this dog?</string>
 </resources>

@@ -6,9 +6,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClickListener="@{clickListener}"
         android:paddingStart="16dp"
         android:paddingTop="16dp"
-        android:onClickListener="@{clickListener}"
         android:paddingEnd="16dp"
         android:paddingBottom="16dp"
         android:tag="@{item}">
@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{item.id}"
+            android:text="@{Integer.toString(item.id)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

@@ -3,31 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="hasElements"
-            type="Boolean" />
-        
-    </data>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <include
-            layout="@layout/fragment_no_dog"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:visibility="gone"
-            app:isGone="@{!hasElements}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:isGone="@{!hasElements}"
             tools:listitem="@layout/fragment_dog" />
 
+        <include
+            android:id="@+id/fragmentNoElements"
+            layout="@layout/fragment_no_dog"
+            app:isGone="@{hasElements}"
+            tools:visibility="gone" />
+
     </FrameLayout>
+
+    <data>
+
+        <variable
+            name="hasElements"
+            type="Boolean" />
+
+    </data>
 
 </layout>
